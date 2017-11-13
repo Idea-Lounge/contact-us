@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   var router = require('express').Router(),
-  functions = require('./functions');
+    functions = require('./functions');
 /* Handel POST request from the contactUs form. */
   router.post('/contact-us', function (req, res, next) {
     // TODO: request parser
