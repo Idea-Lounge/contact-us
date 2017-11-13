@@ -1,17 +1,17 @@
 (function () {
   "use strict";
-  var router = require('express').Router();
+  var router = require('express').Router(),
+  functions = require('./functions');
 /* Handel POST request from the contactUs form. */
   router.post('/contact-us', function (req, res, next) {
     // TODO: request parser
-    // create a response object
     var response = {};
-
-
-//QUESTION: how can we use functions object without importing it?
     functions.contactUs(req.body, function (error) {
       if (!error) {
-        //what to do? send some sucress message? Close the pop up window?
+        response = {
+          'message': 'Email sent to freelancers.'
+        };
+        res.json(response);
       } else {
         response = {
           error_code: 400,
