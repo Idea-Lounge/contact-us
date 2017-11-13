@@ -1,0 +1,48 @@
+
+<html>
+  <head>
+    <title>Contact Us</title>
+
+    <!-- Style Dependencies -->
+      <link rel="stylesheet"  href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+      <link rel="">
+    <!-- Style Dependencies -->
+
+    <link rel="stylesheet"  href="stylesheets/style.css" />
+  </head>
+
+  <body>
+    <a href="#test-form" class="btn btn-primary btn-xl popup-with-form">
+Talk to Us
+</a>
+
+    <form id="test-form"
+      action="/users/contact-us"
+      method="post"
+      class="white-popup-block mfp-hide popup-with-form">
+            <h2>
+                Contact Us
+            </h2>
+            <div class="form-group">
+                <input type="text" class="form-control" id="text" name="name" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your email address" />
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="message" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default frombtn pull-right">
+                SEND <i class="fa fa-chevron-circle-right"></i>
+            </button>
+            <div class="clearfix"></div>
+    </form>
+
+    <!-- Javascript Dependencies -->
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <!-- Javascript Dependencies -->
+
+    <script type="text/javascript" src="javascripts/scripts.js"></script>
+  </body>
+</html>
