@@ -1,9 +1,15 @@
 (function () {
+  "use strict";
   var nodemailer = require('nodemailer'),
     config = require('../../config.js');
-  functions: {
+
+  var functions = {
     contactUs: function (requestBody, callback) {
-      const nodemailer = require('nodemailer');
+
+      //QUESTION: why do we require nodemail 2 times?
+        //QUESTION:where do we invoke callback?
+
+    const nodemailer = require('nodemailer');
 
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
@@ -19,17 +25,27 @@
           pass: config.emailAccount.password  // generated ethereal password
         }
       });
+      var freelancers = '';
+      function constructFreelancerString(array) {
+        array.forEach(function(element) {
+          freelancers = freelancers + element.email + ',';
+        });
+      }
 
-      // setup email data with unicode symbols
+      constructFreelancerString(config.freelancers);
+      console.log(freelancers);
+      callback(null);
+      // // setup email data with unicode symbols
+      var emailBody = 'Name: ' + requestBody.name + '\n';
+      emailBody += 'Email: ' + requestBody.email + '\n';
+      emailBody += 'Message: ' + requestBody.message;
       let mailOptions = {
-        from: '"Fred Foo 👻" <foo@blurdybloop.com>', // sender address
-        to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers
+        from: '"IdeaLounge 👻" <ideallounge.info@gmail.com>', // sender address
+        to: freelancers, // list of receivers
         subject: 'Hello ✔', // Subject line
-        text: 'Hello world?', // plain text body
-        html: '<b>Hello world?</b>' // html body
+        text: emailBody// plain text bodys
       };
-
-      // send mail with defined transport object
+      // // send mail with defined transport object
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
           return console.log(error);
@@ -37,11 +53,8 @@
         console.log('Message sent: %s', info.messageId);
         // Preview only available when sending through an Ethereal account
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
       });
-});
+    });
     }
   };
 
