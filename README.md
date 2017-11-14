@@ -7,11 +7,11 @@ Contact Us component
 3. cp config.js.example config.js
 
 # Developer Comments:
-1. codeReview(<user>): <message>
-2. TODO(<user>): <message>
-3. QUESTION(<user>): <message>
-4. ANSWER(<user>): <message>
-5. DOCS(<user>): <message>
+1. codeReview([user]): [message]
+2. TODO([user]): [message]
+3. QUESTION([user]): [message]
+4. ANSWER([user]): [message]
+5. DOCS([user]): [message]
 
 #Start
 npm start
