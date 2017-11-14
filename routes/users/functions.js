@@ -2,12 +2,9 @@
   "use strict";
   var nodemailer = require('nodemailer'),
     config = require('../../config.js');
-
+// functions collection, which will be used to react on different http requests
   var functions = {
     contactUs: function (requestBody, callback) {
-
-      //QUESTION: why do we require nodemail 2 times?
-        //QUESTION:where do we invoke callback?
 
     const nodemailer = require('nodemailer');
 
@@ -25,15 +22,17 @@
           pass: config.emailAccount.password  // generated ethereal password
         }
       });
+      //what a wonderful function to construct the string of the freelacer emails!
       var freelancers = '';
-      function constructFreelancerString(array) {
+      function GetEmails(array) {
         array.forEach(function(element) {
           freelancers = freelancers + element.email + ',';
         });
       }
 
-      constructFreelancerString(config.freelancers);
+      GetEmails(config.freelancers);
       console.log(freelancers);
+      //QUESTION:is null an error? how the error will be passed if such appers?
       callback(null);
       // // setup email data with unicode symbols
       var emailBody = 'Name: ' + requestBody.name + '\n';
@@ -42,10 +41,10 @@
       let mailOptions = {
         from: '"IdeaLounge 👻" <ideallounge.info@gmail.com>', // sender address
         to: freelancers, // list of receivers
-        subject: 'Hello ✔', // Subject line
+        subject: 'Hello', // Subject line
         text: emailBody// plain text bodys
       };
-      // // send mail with defined transport object
+      // send mail with defined transport object
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
           return console.log(error);
