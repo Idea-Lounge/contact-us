@@ -422,3 +422,52 @@ color:#00A5D9;font-family:'Open Sans',sans-serif;font-weight:700;}
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+    .call-to-action h2{margin:0 auto 20px}
+.text-primary{color:#00aeff}
+.no-gutter>[class*=col-]{padding-right:0;padding-left:0}
+.btn-default{color:#222;background-color:#fff;border-color:#fff;transition:all .35s}
+.btn-default.active,.btn-default.focus,.btn-default:active,.btn-default:focus,.btn-default:hover,.open>.dropdown-toggle.btn-default{color:#222;background-color:#f2f2f2;border-color:#ededed}
+.btn-default.disabled,.btn-default.disabled.active,.btn-default.disabled.focus,.btn-default.disabled:active,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled],.btn-default[disabled].active,.btn-default[disabled].focus,.btn-default[disabled]:active,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default.active,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{background-color:#fff;border-color:#fff}
+.btn-default .badge{color:#fff;background-color:#222}
+.btn-primary{color:#fff;background-color:#00aeff;border-color:#00aeff;-webkit-transition:all .35s;-moz-transition:all .35s;transition:all .35s}
+.btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary{color:#fff;background-color:#009de6;border-color:#0096db}
+.btn-primary.disabled,.btn-primary.disabled.active,.btn-primary.disabled.focus,.btn-primary.disabled:active,.btn-primary.disabled:focus,.btn-primary.disabled:hover,.btn-primary[disabled],.btn-primary[disabled].active,.btn-primary[disabled].focus,.btn-primary[disabled]:active,.btn-primary[disabled]:focus,.btn-primary[disabled]:hover,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary.active,fieldset[disabled] .btn-primary.focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:hover{background-color:#00aeff;border-color:#00aeff}
+.btn-primary .badge{color:#00aeff;background-color:#fff}
+.btn{border:none;border-radius:300px;font-weight:700}
+.btn-xl{padding:15px 30px}
+::-moz-selection{color:#fff;text-shadow:none;background:#222}
+::selection{color:#fff;text-shadow:none;background:#222}
+img::selection{color:#fff;background:0 0}
+img::-moz-selection{color:#fff;background:0 0}
+.aitoe-logo{font-family:Syncopate,Fallback,sans-serif}
+
+.popup-with-form .form-control {
+  background:#CBECF9;border-radius:0px;padding-top:10px;padding-bottom:10px;height:50px;border:none
+  box-shadow:none;font-family:'Open Sans',sans-serif;font-weight:700;color:#00A5D9;
+}
+.popup-with-form textarea.form-control {
+  resize:none;height:150px;
+}
+.fa.fa-chevron-circle-right {
+  padding-left:10px;
+}
+.btn.btn-default.frombtn:hover {
+  background:#009de6;opacity:0.8;
+}
+.popup-with-form::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color:#00A5D9;font-family:'Open Sans',sans-serif;font-weight:700;
+}
+.popup-with-form::-moz-placeholder { /* Firefox 19+ */
+color:#00A5D9;font-family:'Open Sans',sans-serif;
+font-weight:700;
+}
+.popup-with-form:-ms-input-placeholder { /* IE 10+ */
+  color:#00A5D9;
+  font-family:'Open Sans',sans-serif;
+  font-weight:700;}
+.popup-with-form:-moz-placeholder{ /* Firefox 18- */
+  color:#00A5D9;
+  font-family:'Open Sans',sans-serif;
+  font-weight:700;
+}
