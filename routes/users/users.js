@@ -11,6 +11,7 @@
     functions.contactUs(req.body, function (error) {
 //QUESTION: we are involing callback with null?
 //we never passed error or something like that in a contactUs function.
+//ANSWER: when there is no error, the error variable here will be null. In if condition since it is null, it will continue with sending response to frontend. In else condition error exists so we will res.json the error. Resolved?
       if (!error) {
         //if there is no error we construct a respose object
         response = {
