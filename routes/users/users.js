@@ -9,11 +9,8 @@
     // TODO: request parser
     var response = {};
     functions.contactUs(req.body, function (error) {
-      /*
-        QUESTION(Alyona): we are involing callback with null?
-          we never passed error or something like that in a contactUs function.
-        ANSWER(Anurag): when there is no error, the error variable here will be null. In if condition since it is null, it will continue with sending response to frontend. In else condition error exists so we will res.json the error. Resolved?
-      */
+      // TODO: grab informaion from req.body
+      console.log(req.body);
       if (!error) {
         // if there is no error we construct a respose object
         response = {
