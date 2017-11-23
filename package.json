@@ -11,6 +11,7 @@
     "debug": "~2.6.9",
     "ejs": "^2.5.7",
     "express": "~4.15.5",
+    "express-force-ssl": "^0.3.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "nodemailer": "^4.4.0",

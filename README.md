@@ -15,5 +15,3 @@ Contact Us component
 
 #Start
 npm start
-
-THIS IS FROM HTTPS
