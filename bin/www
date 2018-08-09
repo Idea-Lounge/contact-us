@@ -97,14 +97,15 @@ function onHttpListening() {
   * Create HTTPS server.
   */
 var https = require('https');
-var privateKey = fs.readFileSync('encryption/private.key'),
-  primaryCertificate = fs.readFileSync('encryption/primary.crt'),
-  intermediateCertificate = fs.readFileSync('encryption/intermediate.crt');
+// var privateKey = fs.readFileSync('encryption/private.key'),
+//   primaryCertificate = fs.readFileSync('encryption/primary.crt'),
+//   intermediateCertificate = fs.readFileSync('encryption/intermediate.crt');
 
 var credentials = {
-  key: privateKey,
-  cert: primaryCertificate,
-  ca: intermediateCertificate
+    key: fs.readFileSync( 'encryption/localhost.key' ),
+    cert: fs.readFileSync( 'encryption/localhost.cert' ),
+    requestCert: false,
+    rejectUnauthorized: false
 };
 var httpsPort = normalizePort(process.env.PORT || config.server.httpsPort);
 var httpsServer = https.createServer(credentials, app);
